@@ -1,0 +1,39 @@
+modules {
+  module {
+    name = "lm_sens"
+    language = "python"
+
+    # map a name to an identifier in the hiearchy of sensor data
+    param cpu_core0_temp { value = "coretemp-isa-0000:ISA adapter:Core 0:temp2_input" }
+    param cpu_core1_temp { value = "coretemp-isa-0000:ISA adapter:Core 1:temp3_input" }
+    param cpu_core2_temp { value = "coretemp-isa-0000:ISA adapter:Core 2:temp4_input" }
+    param cpu_core3_temp { value = "coretemp-isa-0000:ISA adapter:Core 3:temp5_input" }
+    param cpu_core4_temp { value = "coretemp-isa-0000:ISA adapter:Core 4:temp6_input" }
+    param cpu_core5_temp { value = "coretemp-isa-0000:ISA adapter:Core 5:temp7_input" }
+    param cpu_temp { value = "coretemp-isa-0000:ISA adapter:Package id 0:temp1_input" }
+    param cpu_temp_max { value = "coretemp-isa-0000:ISA adapter:Package id 0:temp1_max" }
+    param cpu_temp_crit { value = "coretemp-isa-0000:ISA adapter:Package id 0:temp1_crit" }
+  }
+}
+
+collection_group {
+  collect_once = true
+  time_threshold = 120
+
+  metric { name = "cpu_temp_max" title = "CPU Max Temperature" }
+  metric { name = "cpu_temp_crit" title = "CPU Crit Temperature" }
+}
+
+collection_group {
+  collect_every = 30
+  time_threshold = 120
+
+  # turn on various named sensor data defined above
+  metric { name = "cpu_core0_temp" title = "CPU Core 0 Temperature" }
+  metric { name = "cpu_core1_temp" title = "CPU Core 1 Temperature" }
+  metric { name = "cpu_core2_temp" title = "CPU Core 2 Temperature" }
+  metric { name = "cpu_core3_temp" title = "CPU Core 3 Temperature" }
+  metric { name = "cpu_core4_temp" title = "CPU Core 4 Temperature" }
+  metric { name = "cpu_core5_temp" title = "CPU Core 5 Temperature" }
+  metric { name = "cpu_temp" title = "CPU Temperature" }
+}

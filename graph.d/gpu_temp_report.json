@@ -1,0 +1,9 @@
+{
+   "report_name" : "gpu_temp_report",
+   "report_type" : "standard",
+   "title" : "GPU Temperature",
+   "vertical_label" : "C",
+   "series" : [
+      { "metric": "gpu0_temp", "color": "ff0000", "label": "gpu0", "line_width": "2", "type": "line" }
+   ]
+}

@@ -1,0 +1,10 @@
+{
+   "report_name" : "disk_space_report",
+   "report_type" : "standard",
+   "title" : "Free Disk Space",
+   "vertical_label" : "GB",
+   "series" : [
+      { "metric": "disk_free_absolute_rootfs", "color": "5555cc", "label": "/", "line_width": "2", "type": "line" },
+      { "metric": "disk_free_absolute_tmp", "color": "33cc33", "label": "/tmp", "line_width": "2", "type": "line" }
+   ]
+}

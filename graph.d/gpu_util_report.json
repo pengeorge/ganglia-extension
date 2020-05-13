@@ -1,0 +1,13 @@
+{
+   "report_name" : "gpu_util_report",
+   "report_type" : "standard",
+   "title" : "GPU Utilization",
+   "vertical_label" : "Percent or C",
+   "height_adjustment": "0",
+   "series" : [
+      { "metric": "gpu0_util", "color": "0000aa", "label": "Util", "type": "stack" },
+      { "metric": "gpu0_mem_util", "color": "33cc33", "label": "VRAM", "line_width": "2", "type": "line" },
+      { "metric": "gpu0_fan", "color": "9900cc", "label": "Fan", "line_width": "2", "type": "line" },
+      { "metric": "gpu0_temp", "color": "ff0000", "label": "Temp", "line_width": "2", "type": "line" }
+   ]
+}

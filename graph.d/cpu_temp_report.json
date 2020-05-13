@@ -1,0 +1,12 @@
+{
+   "report_name" : "cpu_temp_report",
+   "report_type" : "standard",
+   "title" : "CPU Temperature",
+   "vertical_label" : "C",
+   
+   "series" : [
+      { "metric": "cpu_temp", "color": "0000aa", "label": "RT", "line_width": "2", "type": "line" },
+      { "metric": "cpu_temp_max", "color": "ff0000", "label": "Max", "line_width": "2", "type": "line" },
+      { "metric": "cpu_temp_crit", "color": "9900cc", "label": "Crit", "line_width": "2", "type": "line" }
+   ]
+}
